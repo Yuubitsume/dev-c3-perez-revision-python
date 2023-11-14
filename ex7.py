@@ -6,4 +6,4 @@ with open('C:/Users/Julien/Documents/Dev_pyth_atl/input.txt', 'r', encoding="utf
 # Compte le nombre de mots
 mots = contenu.split()
 nombre_mots = len(mots)
-print(nombre_mots)gg
+print(nombre_mots)
