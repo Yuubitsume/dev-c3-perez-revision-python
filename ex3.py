@@ -27,4 +27,4 @@ elif operateur == '/':
 
 #Afficher le résultat si tous se passe bien
 if resultat != None:
-    print("Résultat de l'expression :", resultat)
+    print("Le résultat est", resultat)
