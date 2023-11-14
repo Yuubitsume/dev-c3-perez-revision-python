@@ -31,4 +31,9 @@ eleves_max_notes = []
 for i, (eleve, note) in enumerate(notes_eleves.items()):
     if note > max_note:
         max_note = note
-       
+        eleves_max_notes = [eleve] #réinitialise la liste eleves_max_notes si une nouvelle note est rentré
+    elif note == max_note:
+        eleves_max_notes.append(eleve) #ajoute le nom de l'élève avec la max note égale aussi à la max note ( pour en faire une liste)
+
+print("Note maximale parmi les élèves :", max_note)
+print("Élève(s) ayant la note maximale :", sorted(eleves_max_notes))
