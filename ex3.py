@@ -1,7 +1,7 @@
 import re
 
 #demande à l'utilisateur le calcul souhaité
-expression = input("Entrez une expression mathématique (ex: 3+1-4*4) : ")
+expression = input("Entrez une expression mathématique (ex: 2*6-4*4) : ")
 
 #permet de séparer le calcul sur les différents opérateurs avec du regex
 termes = re.split(r'(\+|\-|\*|\/)', expression)
@@ -19,6 +19,12 @@ elif operateur == '-':
 elif operateur == '*':
     resultat = nombre1 * nombre2
 elif operateur == '/':
-    resultat = nombre1 / nombre2
-    
-print("Le résultat est : ", resultat)
+    if nombre1 != 0 and nombre2 != 0:  # Vérifier que ni le numérateur ni le dénominateur ne soient égales à zéro
+        resultat = nombre1 / nombre2
+    else:
+        print("Division par zéro impossible")
+        resultat = None
+
+#Afficher le résultat si tous se passe bien
+if resultat != None:
+    print("Résultat de l'expression :", resultat)
